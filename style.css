@@ -20,7 +20,36 @@ input{
 button{
     width: 18%;
     padding: 10px;
+    background-color: #ddd;
+   
 }
-/* button:hover{
-    background-color: rgb(120, 120, 120);
-} */
+.addButton:hover{
+    background-color: rgb(150, 150  , 150);
+}
+ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+  }
+  
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+  
