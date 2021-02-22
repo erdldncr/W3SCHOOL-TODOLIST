@@ -17,7 +17,7 @@ input{
     width: 70%;
     padding: 10px;
 }
-button{
+.addButton{
     width: 18%;
     padding: 10px;
     background-color: #ddd;
@@ -25,6 +25,20 @@ button{
 }
 .addButton:hover{
     background-color: rgb(150, 150  , 150);
+}
+.closeButton{
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    top: -1px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+
+}
+.closeButton:hover{
+    color: #fff;
+    background-color:#FF0000;
 }
 ul {
     margin: 0;
@@ -44,12 +58,15 @@ ul {
   
   
   /* Set all odd list items to a different color (zebra-stripes) */
-  ul li:nth-child(odd) {
-    background: #f9f9f9;
-  }
+
   
   /* Darker background-color on hover */
   ul li:hover {
-    background: #ddd;
+    background-color:rgb(100,100,100);
   }
-  
+  .liClick {
+ color:#FFF;
+background-color:rgb(100,100,100);
+    text-decoration: line-through;
+  }
+  .hidden{display: none;}

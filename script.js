@@ -14,13 +14,27 @@ function addItem(){
     li.innerHTML=input.value
     li.setAttribute('onclick','liClick(this)')
     ul.appendChild(li)
+    ///close button
+    const closeButton=document.createElement('button')
+    closeButton.innerHTML="\u00D7"
+    li.append(closeButton)
+    closeButton.className='closeButton'
+    closeButton.setAttribute('onclick','removeElement(this)')
  }else{
      alert('please write something')
  }
+ input.value=""
 }
 function liClick(element){
-  element.innerHTML= `<strike> ${element.innerHTML}</strike>`  
+   if(!element.innerHTML.includes('✅')){
   element.prepend(document.createTextNode('✅'))
-element.style.color="#FFF"
-element.style.backgroundColor='rgb(101,136,128)'
+   }
+   else{
+    element.innerHTML=element.innerHTML.slice(1)
+}
+  element.classList.toggle('liClick')
+}
+//// to delete parent element of cloase button
+function removeElement(element){
+    element.parentElement.classList.toggle('hidden')
 }
